@@ -26,10 +26,10 @@ class Play
 
 	def save_game
 		directory_name = "saved_games"
-		Dir.mkdir(directory_name) unless File.exists?(directory_name)
+		Dir.mkdir(directory_name) unless File.exists?(directory_name) #if "saved_games folrder doesnt exist create one"
 		puts "\nSelect a name to save your game"
 		save_name=gets.chomp
-		File.open("saved_games/#{save_name}.yaml","w").puts YAML.dump(self)
+		File.open("saved_games/#{save_name}.yaml","w").puts YAML.dump(self) #Save the information in another file
 		puts "\nGame saved!"
 	end
 
@@ -46,7 +46,7 @@ class Play
 		end
 	end
 
-	def display_saved_games
+	def display_saved_games #Display avaiable saved games
 		directory_name = "saved_games"
 		Dir.mkdir(directory_name) unless File.exists?(directory_name)
 		if Dir.glob('saved_games/*').empty?
@@ -59,7 +59,7 @@ class Play
 	end
 
 
-	def new_game
+	def new_game #Generate a new word and set everything for a new game
 		@random_number=rand(61406) #Generate a random number
 		@random_word=File.readlines("5desk.txt")[@random_number].chomp.to_s.upcase #read the random number generated line
 		@correct_position=@random_word.split(//) #split the word in individual letters
@@ -69,7 +69,6 @@ class Play
 		puts "\nThe secret word is..\n\n"
 		@correct_guesses.each_with_index { |value, index| print @correct_guesses[index]} #draw underscores. one for each letter
 		puts "\n\n"
-		puts "#{@correct_position}"
 		game_loop
 	end
 
@@ -136,6 +135,7 @@ class Play
 				end
 			end
 			puts "\n\n\n\nYou are out of turns, you lose!!!"
+			puts "\n the secret word was #{@random_word}"
 			break
 		end
 	end
