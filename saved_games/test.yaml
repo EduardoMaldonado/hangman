@@ -1,0 +1,29 @@
+--- !ruby/object:Play
+random_number: 44196
+random_word: RASPUTIN
+correct_position:
+- R
+- A
+- S
+- P
+- U
+- T
+- I
+- N
+correct_guesses:
+- R
+- A
+- S
+- P
+- U
+- T
+- I
+- '_ '
+incorrect_guesses:
+- K
+- L
+- '1'
+- W
+- D
+- ''
+turn_counter: 6

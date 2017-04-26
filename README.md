@@ -1,7 +1,7 @@
-Clasic hangman game with save/load features.
+<h1>Clasic hangman game with save/load features.</h1>
 
 Part of the odin project curriculum
 
-Project: Serialization and Working with Files
+<h2>Project: Serialization and Working with Files</h2>
 
-http://www.theodinproject.com/courses/ruby-programming/lessons/file-i-o-and-serialization?ref=lnav
+<a href="http://www.theodinproject.com/courses/ruby-programming/lessons/file-i-o-and-serialization?ref=lnav">Project: Serialization and Working with Files </a>
